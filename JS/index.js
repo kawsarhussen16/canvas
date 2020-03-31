@@ -1,16 +1,12 @@
-let canvas = document.querySelector("canvas");
+let canvas = document.getElementById("field_1");
 var ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+ctx.fillStyle = "red";
+ctx.font = "30px Arial";
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+ctx.fillText("Hello from the other side :D", canvas.width/2, 50);
 var startAngle = 0;
 var endAngle = 2 * Math.PI;
-
-function draw() {
-  init();
-  background();
-  //   drawSunAndMoon();
-  //      drawHappyFace();
-}
 
 function drawMoon() {
   var x = 100;
@@ -155,8 +151,8 @@ function background() {
   context.fillRect(0, 0, w, h);
 
   for (var t = 0; n > t; t++) {
-        drawSunAndMoon();
-        drawHappyFace();
+    //    drawSunAndMoon();
+    //    drawHappyFace();
     star_x_save = star[t][3];
     star_y_save = star[t][4];
     star[t][2] -= star_speed;
@@ -173,7 +169,7 @@ function background() {
   }
 }
 
-var r =  document.querySelector("canvas"),
+var r = document.getElementById("field"),
   n = 812,
   w = 1,
   h = 1,
@@ -191,4 +187,9 @@ var r =  document.querySelector("canvas"),
   context,
   fps = 10;
 
-draw();
+  
+  drawSunAndMoon();
+  drawHappyFace();
+
+  init();
+  background();

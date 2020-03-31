@@ -1,23 +1,27 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        background: rgb(22, 22, 24);
+      }
+    </style>
+  </head>
 
-<head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Canvas</title>
-     <style type="text/css">
-          body {
-               margin: 0;
-               padding: 0;
-               background: white;
-          }
-     </style>
-</head>
-
-<body>
-     <canvas id = "field">
-
-     </canvas>
-     <script src="JS/index.js"></script>
-</body>
-
+  <body>
+    <canvas
+      id="field_1"
+      width="1120px"
+      height="780px"
+      style="border:1px solid #1b1b22; position: absolute; left: 0; top: 0; z-index: 0;"
+    >
+    </canvas>
+    <canvas id="field" style="position: absolute; left: 0; top: 0; z-index: -1;">
+    </canvas>
+    <script src="JS/index.js"></script>
+  </body>
 </html>
